@@ -1,0 +1,23 @@
+keys,en,ru
+Saturday,Saturday,Суббота
+Sunday,Sunday,Воскресенье
+Monday,Monday,понедельник
+Tuesday,Tuesday,вторник
+Wednesday,Wednesday,среда
+Thursday,Thursday,Четверг
+Friday,Friday,Пятница
+System Information,System Information,Системная информация
+Quit,Quit,Покидать
+Select Preferred Language,Select Preferred Language,Выберите предпочтительный язык
+Desired Username,Desired Username,Желаемое имя пользователя
+Username,Username,Имя пользователя
+Password,Password,Пароль
+Continue,Continue,Продолжать
+Register User,Register User,Зарегистрировать пользователя
+Login,Login,Авторизоваться
+Power State,Power State,Состояние питания
+Percent Remaining,Percent Remaining,Остающийся процент
+Time Remaining,Time Remaining,Времени осталось
+GPU Provider,GPU Provider,Провайдер ГПУ
+GPU,GPU,ГПУ
+RAM,RAM,память
