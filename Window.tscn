@@ -1,0 +1,90 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/System/Window.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+
+[node name="Window" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1018.0
+margin_bottom = -2.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ViewportContainer" type="ViewportContainer" parent="."]
+margin_top = 19.0
+margin_right = 950.0
+margin_bottom = 1051.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Viewport" type="Viewport" parent="ViewportContainer"]
+size = Vector2( 1024, 1032 )
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="GuiTitleBar" type="NinePatchRect" parent="."]
+anchor_right = 1.109
+anchor_bottom = 0.019
+margin_right = -0.318054
+margin_bottom = -0.482002
+mouse_filter = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="GuiTitleBar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0.152941, 0.152941, 0.152941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GuiTitleBar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1.0
+custom_constants/separation = 30
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AppIcon" type="NinePatchRect" parent="GuiTitleBar/HBoxContainer"]
+margin_left = 432.0
+margin_right = 432.0
+margin_bottom = 19.0
+texture = ExtResource( 2 )
+
+[node name="AppName" type="Label" parent="GuiTitleBar/HBoxContainer"]
+margin_left = 462.0
+margin_top = 2.0
+margin_right = 568.0
+margin_bottom = 16.0
+mouse_filter = 1
+text = "Aplication Name"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CloseButton" type="Button" parent="."]
+self_modulate = Color( 1.5, 0, 0, 1 )
+margin_left = 5.66403
+margin_top = 4.75537
+margin_right = 25.664
+margin_bottom = 24.7554
+rect_scale = Vector2( 0.5, 0.5 )
+text = "X"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="gui_input" from="GuiTitleBar" to="." method="_on_GuiTitleBar_gui_input"]
+[connection signal="gui_input" from="GuiTitleBar/HBoxContainer/AppName" to="." method="_on_Label_gui_input"]
+[connection signal="pressed" from="CloseButton" to="." method="_on_Button_pressed"]

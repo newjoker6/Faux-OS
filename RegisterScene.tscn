@@ -1,0 +1,204 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Boot/Boot03.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/System/RegisterScene.gd" type="Script" id=2]
+[ext_resource path="res://Fonts/InfoBarFont.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Fonts/PlaceholderText.tres" type="DynamicFont" id=4]
+
+[sub_resource type="Animation" id=1]
+resource_name = "RegistrationFade"
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Panel:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Panel:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Panel:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("Panel:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+
+[node name="RegisterScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -248.0
+margin_top = -173.0
+margin_right = 248.0
+margin_bottom = 173.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RegisterUser" type="Label" parent="Panel"]
+margin_left = 138.497
+margin_top = 24.2389
+margin_right = 348.497
+margin_bottom = 52.2389
+rect_pivot_offset = Vector2( -174.281, -144.297 )
+custom_fonts/font = ExtResource( 3 )
+text = "Register User"
+align = 1
+valign = 1
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="LabelContainer" type="VBoxContainer" parent="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 19.0
+margin_top = 71.0
+margin_right = -267.0
+margin_bottom = -153.0
+custom_constants/separation = 19
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Language" type="Label" parent="Panel/LabelContainer"]
+margin_right = 210.0
+margin_bottom = 28.0
+rect_pivot_offset = Vector2( -250.568, -99.2648 )
+custom_fonts/font = ExtResource( 3 )
+text = "Select Preferred Language"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Username" type="Label" parent="Panel/LabelContainer"]
+margin_top = 47.0
+margin_right = 210.0
+margin_bottom = 75.0
+rect_pivot_offset = Vector2( -174.281, -144.297 )
+custom_fonts/font = ExtResource( 3 )
+text = "Desired Username"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Password" type="Label" parent="Panel/LabelContainer"]
+margin_top = 94.0
+margin_right = 210.0
+margin_bottom = 122.0
+rect_pivot_offset = Vector2( -174.281, -144.297 )
+custom_fonts/font = ExtResource( 3 )
+text = "Password"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextContainer" type="VBoxContainer" parent="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 297.0
+margin_top = 78.0
+margin_right = -16.0
+margin_bottom = -123.0
+custom_constants/separation = 22
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="OptionButton" type="OptionButton" parent="Panel/TextContainer"]
+margin_right = 183.0
+margin_bottom = 20.0
+text = "en"
+items = [ "en", null, false, 0, null, "ru", null, false, 1, null ]
+selected = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Username" type="LineEdit" parent="Panel/TextContainer"]
+margin_top = 42.0
+margin_right = 183.0
+margin_bottom = 73.0
+rect_pivot_offset = Vector2( -490.663, -57.4408 )
+custom_fonts/font = ExtResource( 4 )
+placeholder_text = "asdfasdff"
+
+[node name="Password" type="LineEdit" parent="Panel/TextContainer"]
+margin_top = 95.0
+margin_right = 183.0
+margin_bottom = 126.0
+rect_pivot_offset = Vector2( -490.663, -57.4408 )
+custom_fonts/font = ExtResource( 4 )
+secret = true
+placeholder_text = "asfdas"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OkButton" type="Button" parent="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 358.312
+margin_top = 273.291
+margin_right = -103.688
+margin_bottom = -38.7086
+custom_fonts/font = ExtResource( 3 )
+text = "OK"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RegistrationFade = SubResource( 1 )
+
+[connection signal="item_selected" from="Panel/TextContainer/OptionButton" to="." method="_on_OptionButton_item_selected"]
+[connection signal="pressed" from="Panel/OkButton" to="." method="_on_OkButton_pressed"]
