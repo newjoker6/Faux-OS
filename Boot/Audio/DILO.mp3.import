@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/DILO.mp3-d92856063e90c82f49b3b07fd17cc879.mp3str"
+
+[deps]
+
+source_file="res://Boot/Audio/DILO.mp3"
+dest_files=[ "res://.import/DILO.mp3-d92856063e90c82f49b3b07fd17cc879.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

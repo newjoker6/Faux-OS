@@ -2,8 +2,8 @@ extends Node
 
 
 var App_Name = ProjectSettings.get_setting("application/config/name")
-#var App_Dir = OS.get_executable_path().replace("%s.exe" %App_Name, "")
-var App_Dir = "E:/PCUSER/Documents/AppDev/OS/Operating System.exe".replace("%s.exe" %App_Name, "System/Applications/")
+var App_Dir = OS.get_executable_path().replace("%s.exe" %App_Name, "")
+#var App_Dir = "E:/PCUSER/Documents/AppDev/OS/Operating System.exe".replace("%s.exe" %App_Name, "System/Applications/")
 var Base_Dir = "E:/PCUSER/Documents/AppDev/OS/Operating System.exe".replace("%s.exe" %App_Name, "")
 
 var screen_size = OS.get_screen_size()
